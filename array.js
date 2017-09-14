@@ -13,7 +13,7 @@ console.log(arr);
 */
 
 var arr = ['n', 'l', 'm'];
-
 console.log(arr.sort());
 
-va
+var arr = ['one' ,'two', 'three'];
+console.log(arr.reverse());
