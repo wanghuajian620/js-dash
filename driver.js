@@ -7,9 +7,12 @@ var  device = ['/dev/console','/dev/display'];
 function open(dev) {
     var index = device.indexOf(dev);
 
-    if (index < 0) {
+    if (index < 0) 
+    {
         console.log(`${dev} not exists`);
-    } else {
+    } 
+    else 
+    {
         drvires[index].open();
     }
 
