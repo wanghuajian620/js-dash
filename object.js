@@ -17,13 +17,13 @@ var o = Object.create(null, {
         writable: true,
         configurable: true,
         value: 'hello'
-    },
+        },
     bar: {
         configurable: false,
         get: function() { return 10;},
         set: function(value) {
             console.log(`setting 'o.bar' to, ${value}`);
-        }
+        }   
     }
 });
 console.log(`typeof o: ${typeof o},${Object.getPrototypeOf(o)}`);
