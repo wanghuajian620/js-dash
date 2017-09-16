@@ -4,7 +4,7 @@
 
 var o = Object.create(null, {
     foo: {
-        enumerable:false,
+        enumerable:true,
         writable: true,
         configurable: true,
         value: 'hello'
