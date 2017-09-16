@@ -4,20 +4,17 @@
 
 var o = Object.create(null, {
     foo: {
-        enumerable: true,
+        enumerable:false,
         writable: true,
         configurable: true,
-        value: 20
-    },
+        value: 'hello'
+    }, 
     bar: {
-        enumerable: false,
+        enumerable:true,
         writable: true,
         configurable: true,
-        value: 20
+        value: 'hello'
     }
 });
 
-var target = {};
-Object.assign(target, o);
-console.log(target, o);
-console.log(target.bar, o.bar);
+console.log(Object.entries(o));

@@ -19,46 +19,57 @@ function open(dev) {
     return index;
 }
 
-function read(dev){
+function read()
+{
     return drvires[dev].read();
 }
 
-function write(dev){
+function write()
+{
     return drvires[dev].write();
 }
 
-function close(dev){
+function close()
+{
     return drvires[dev].close();
 }
 
 var drvires = [
     {
         type:'/dev/console',
-        open: function(){
+        open: function()
+        {
             console.log('console.open')
         },
-        read: function(){
+        read: function()
+        {
             console.log('console.read')
         },
-        write:function(){
+        write:function()
+        {
             console.log('console.write')
         },
-        close:function(){
+        close:function()
+        {
             console.log('console.close')
         },
     }, 
     {
         type:'/dev/display',
-        open: function(){
+        open: function()
+        {
             console.log('display.open')
         },
-        read: function(){
+        read: function()
+        {
             console.log('display.read')
         },
-        write:function(){
+        write:function()
+        {
             console.log('display.write')
         },
-        close:function(){
+        close:function()
+        {
             console.log('display.close')
         }, 
     }
