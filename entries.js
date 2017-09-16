@@ -16,5 +16,5 @@ var o = Object.create(null, {
         value: 'hello'
     }
 });
-
-console.log(Object.entries(o));
+Object.getOwnPropertyNames(o)
+console.log(Object.getOwnPropertyNames(o));
