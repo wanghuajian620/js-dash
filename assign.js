@@ -10,7 +10,7 @@ var o = Object.create(null, {
         value: 20
     },
     bar: {
-        enumerable: false,
+        
         writable: true,
         configurable: true,
         value: 20
