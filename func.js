@@ -14,7 +14,7 @@ console.log(c);
 b.a = 'name';
 
 var d = a();
-d.a = 'age';
+d.a= 'age';
 
 console.log(b.a, d.a);
 
