@@ -12,4 +12,12 @@ for(var x = 1;x < 10; x++){
 } 
 //a = `${x}\t` + a;
 //console.log(a);
+
+for(var x= 1; x < 10; x++){
+    var a = [];
+    for(var y = 1; y <= x;y++){
+        a.push(`${x * y}\t`);
+    }
+    console.log(a.toString());
+}
  

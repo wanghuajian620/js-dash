@@ -2,8 +2,8 @@
  * 2017-09-17 Huajian Wang
  */
 
-var somthing = '      !hello world @     ';
-
+var somthing = 'hello world';
+var newsomthing = 'new world';
 console.log('------------charAt-------------');
 console.log(somthing.charAt(0));
 console.log(somthing.charAt(1));
@@ -78,6 +78,9 @@ console.log(somthing.substr(-5,4));
 console.log('------------substring-------------');
 console.log(somthing.substring(0,3));
 console.log(somthing.substring(0,12));
+
+console.log('------------toString-------------');
+console.log(newsomthing.toString());
 
 console.log('------------trim-------------');
 console.log(somthing.trim(''));
