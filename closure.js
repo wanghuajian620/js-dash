@@ -50,3 +50,14 @@ var b = a(3);
 console.log(b(), b(), b(), b());
 
 
+var a = function(){
+    return function(){
+        var banana = {
+            age: 2
+        }
+    }
+};
+var b = a();
+console.log(b(), b(), b(), b());
+
+
