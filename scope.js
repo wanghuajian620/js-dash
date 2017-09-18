@@ -3,20 +3,20 @@
  */
 
 
-/*
+
 var i = 3
 
-if(i<20){
-    x= i + 1;
-    y= i 
-} else{
-    y= i + 5
+if(i < 20) {
+    x = i + 1;
+    y = i 
+} else {
+    y = i + 5
 }
-z= i + 3;
+z = i + 3;
 console.log(x);
 console.log(y);
 console.log(z);
-*/
+
 
 
 console.log('.........for............');
