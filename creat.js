@@ -66,7 +66,7 @@ console.log(b.__proto__ === Function.__proto__);
 
 console.log(a.__proto__.__proto__ === Function.prototype.__proto__);
 console.log(a.__proto__.__proto__ === Object.prototype);
-console.log( x.__proto__=== Object.prototype);
+
 
 
 

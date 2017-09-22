@@ -7,7 +7,7 @@ for(var x = 1;x < 10; x++){
     for(var y = 1;y <= x; y++){
         a = a + x * y + '\t'; 
     } 
-    a = `${x}\t` + a;
+    a = `${x}\t`+ a ;
     console.log(a)   
 } 
 //a = `${x}\t` + a;
