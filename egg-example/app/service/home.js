@@ -19,6 +19,15 @@ module.exports = app => {
     * dog() {
       return 'kun son';
     }
+    * lodash() {
+      return 'jianjian';
+    }
+    * shark() {
+      const z = function(x) {
+        return x + 1;
+      };
+      return z(2);
+    }
   }
   return Home;
 };

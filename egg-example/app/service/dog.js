@@ -1,6 +1,6 @@
 'use strict';
 module.exports = app => {
-  class dog extends app.Service {
+  class Dog extends app.Service {
     * find() {
       return 'new world';
     }
@@ -8,5 +8,5 @@ module.exports = app => {
       return 'kun son';
     }
   }
-  return dog;
+  return Dog;
 };

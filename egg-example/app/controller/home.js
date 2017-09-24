@@ -1,4 +1,6 @@
 'use strict';
+const _ = require('lodash');
+
 
 module.exports = app => {
   class HomeController extends app.Controller {
@@ -6,7 +8,9 @@ module.exports = app => {
       this.ctx.body = yield this.service.home.find();// because * function ,so invoke must add yeild.
     }
     * index1() {
-      this.ctx.body = 'new world';
+      const result = this.ctx.helper.foo(this.ctx.request.query.a);
+      const result1 = this.ctx.helper.bar(this.ctx.request.query.b);
+      this.ctx.body = result + ' ' + result1;
     }
     * sina() {
       const result = yield this.service.home.sina();
@@ -24,6 +28,18 @@ module.exports = app => {
     * dog() {
       const result = yield this.service.dog.pig();
       const result1 = yield this.service.dog.find();
+      this.ctx.body = result + ' ' + result1;
+    }
+    * lodash() {
+      // const a = yield this.service.lodash.find();
+      // const b = yield this.service.lodash.dig();
+      // this.ctx.body = _.differenceBy(a, b, Math.floor);
+      const c = yield this.service.lodash.pig();
+      this.ctx.body = _.initial(c);
+    }
+    * shark() {
+      const result = yield this.service.shark.bird();
+      const result1 = yield this.service.home.shark();
       this.ctx.body = result + ' ' + result1;
     }
   }
