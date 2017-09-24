@@ -33,14 +33,20 @@ module.exports = app => {
       return today + 8;
     }
     * date1() {
+      function sso(x) {
+        if (x < 10) {
+          return '0' + x;
+        }
+        return x;
+      }
       const a = new Date();
       const b = a.getFullYear();
-      const c = a.getMonth();
-      const d = a.getDate();
-      const e = a.getHours();
-      const f = a.getMinutes();
-      const g = a.getSeconds();
-      return `${b}-${c + 1}-${d}-${e}-${f}-${g}`;
+      const c = sso(a.getMonth() + 1);
+      const d = sso(a.getDate());
+      const e = sso(a.getHours());
+      const f = sso(a.getMinutes());
+      const g = sso(a.getSeconds());
+      return `${b}-${c}-${d}-${e}-${f}-${g}`;
     }
   }
   return Home;
