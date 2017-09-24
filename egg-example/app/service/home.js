@@ -28,6 +28,20 @@ module.exports = app => {
       };
       return z(2);
     }
+    * date() {
+      const today = new Date();
+      return today + 8;
+    }
+    * date1() {
+      const a = new Date();
+      const b = a.getFullYear();
+      const c = a.getMonth();
+      const d = a.getDate();
+      const e = a.getHours();
+      const f = a.getMinutes();
+      const g = a.getSeconds();
+      return `${b}-${c + 1}-${d}-${e}-${f}-${g}`;
+    }
   }
   return Home;
 };

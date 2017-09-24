@@ -42,6 +42,12 @@ module.exports = app => {
       const result1 = yield this.service.home.shark();
       this.ctx.body = result + ' ' + result1;
     }
+    * date() {
+      this.ctx.body = yield this.service.home.date();
+    }
+    * date1() {
+      this.ctx.body = yield this.service.home.date1();
+    }
   }
   return HomeController;
 };

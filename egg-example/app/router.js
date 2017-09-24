@@ -8,6 +8,8 @@ module.exports = app => {
   app.get('/test', 'home.test');
   app.get('/dog', 'home.dog');
   app.get('/lodash', 'home.lodash');
-  app.get('/shark', 'home.shark');
+  app.post('/shark', 'home.shark');
+  app.post('/date', 'home.date');
+  app.post('/date1', 'home.date1');
   // app.get('/helper', 'nome.helper');
 };
