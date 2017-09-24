@@ -3,7 +3,7 @@
 module.exports = app => {
   class HomeController extends app.Controller {
     * index() {
-      this.ctx.body = yield this.service.home.find();
+      this.ctx.body = yield this.service.home.find();// because * function ,so invoke must add yeild.
     }
     * index1() {
       this.ctx.body = 'new world';
@@ -17,7 +17,7 @@ module.exports = app => {
       this.ctx.body = result;
     }
     * test() {
-      const result = yield this.service.home.test();
+      const result = yield this.service.home.test(); // yield this. behind  turn  dictory(service), file(home), last(invoked method)
       const result1 = yield this.service.test.test1();
       this.ctx.body = result + ' ' + result1;
     }
