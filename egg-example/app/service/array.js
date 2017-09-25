@@ -18,6 +18,18 @@ module.exports = app => {
       const b = [{ x: 1, y: 1 }, { x: 1, y: 2 }];
       return _.unionWith(a, b, _.isEqual);
     }
+    * zip() {
+      const a = [ 'x', 'y' ];
+      const b = [ 1, 2 ];
+      const c = [ true, false ];
+      return _.zip(a, b, c);
+    }
+    * zipWith() {
+      return _.zipWith([ 1, 2 ], [ 10, 20 ], [ 100, 200 ], function(a, b, c) {
+        return a + b + c;
+      });
+    }
   }
   return Array;
 };
+

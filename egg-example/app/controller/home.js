@@ -57,6 +57,12 @@ module.exports = app => {
     * unionWith() {
       this.ctx.body = yield this.service.array.unionWith();
     }
+    * zip() {
+      this.ctx.body = yield this.service.array.zip();
+    }
+    * zipWith() {
+      this.ctx.body = yield this.service.array.zipWith();
+    }
   }
   return HomeController;
 };
