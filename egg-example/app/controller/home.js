@@ -48,6 +48,15 @@ module.exports = app => {
     * date1() {
       this.ctx.body = yield this.service.home.date1();
     }
+    * array() {
+      this.ctx.body = yield this.service.array.union();
+    }
+    * unionBy() {
+      this.ctx.body = yield this.service.array.unionBy();
+    }
+    * unionWith() {
+      this.ctx.body = yield this.service.array.unionWith();
+    }
   }
   return HomeController;
 };

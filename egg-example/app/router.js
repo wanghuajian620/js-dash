@@ -11,5 +11,9 @@ module.exports = app => {
   app.post('/shark', 'home.shark');
   app.post('/date', 'home.date');
   app.post('/date1', 'home.date1');
+  app.get('/array', 'home.array');
+  app.get('/unionBy', 'home.unionBy');
+  app.get('/unionWith', 'home.unionWith');
+  // app.get('/zip', 'home.zip');
   // app.get('/helper', 'nome.helper');
 };
