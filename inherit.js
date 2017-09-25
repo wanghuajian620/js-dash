@@ -1,5 +1,5 @@
 /**
- * 
+ * 2017-09-23 Wang Huajian
  */
 
 /*        first   method   inherit
@@ -64,15 +64,6 @@ function aixiao(child, parent){
 
 
 
-function object(o) {
-    function F() {}
-  
-    F.prototype = o;
-    return new F();
-  }
-F.prototype.food = 'milk';
-var x = object(o);
-console.log(x(o));
 
 
 

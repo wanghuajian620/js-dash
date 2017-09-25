@@ -11,6 +11,7 @@ var b =  a() ;
 var c = b(1);
 console.log(c);
 
+/*
 b.a = 'name';
 
 var d = a();
@@ -19,3 +20,4 @@ d.a= 'age';
 console.log(b.a, d.a);
 
 console.log(a()(2));
+*/

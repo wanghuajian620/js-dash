@@ -30,5 +30,9 @@ console.log(_.findIndex(x,'active'));// if don't write  true or false, then defa
 
 console.log(_.findLastIndex(x,['active',false]));
 */
-var a = [['b', 8],['c' , 6]];
-console.log(_.fromPairs(a));
+//var a = [['b', 8],['c' , 6]];
+//console.log(_.fromPairs(a));
+
+
+var a = [1, 2, 3, 4, 5];
+console.log(_.sortedIndexOf([1, 2, 3, 4, 5],3));
