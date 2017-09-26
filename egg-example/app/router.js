@@ -30,4 +30,10 @@ module.exports = app => {
   app.post('/eight', 'fruit.select');
   app.post('/nine', 'fruit.update');
   // app.get('/helper', 'home.helper');
+
+  app.post('/eleven', 'money.create');
+  app.post('/twelve', 'money.delete');
+  app.post('/thirteen', 'money.get');
+  app.post('/fourteen', 'money.select');
+  app.post('/fifteen', 'money.update');
 };

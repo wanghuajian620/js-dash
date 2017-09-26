@@ -1,10 +1,10 @@
 'use strict';
 
 module.exports = app => {
-  class Fruit extends app.Service {
+  class Money extends app.Service {
     * create(param) {
       try {
-        yield app.mysql.insert('fruit', param);
+        yield app.mysql.insert('money', param);
       } catch (e) {
         this.ctx.logger.error(e);
         return false;
@@ -12,24 +12,23 @@ module.exports = app => {
       return true;
     }
 
-    * get(req) {
-      let res;
+    * get() {
+      const conn = yield app.mysql.beginTransaction();
       try {
-        res = yield app.mysql.get('fruit', req);
+        yield conn.update('fruit', { id: 2, a: 'baizhang' });
+        yield conn.update('money', { id: 2, hundred: 'alsomany' });
+        yield conn.commit();
       } catch (e) {
+        yield conn.rollback();
         this.ctx.logger.error(e);
         return false;
       }
-      return res;
+      return true;
     }
     * select() {
       let res;
       try {
-        res = yield app.mysql.select('fruit', {
-          where: {
-            apple: [ 'fushi', 'dahong' ],
-          },
-        });
+        res = yield app.mysql.select('money');
       } catch (e) {
         this.ctx.logger.error(e);
         return false;
@@ -40,7 +39,7 @@ module.exports = app => {
 
     * delete(param) {
       try {
-        yield app.mysql.delete('fruit', param);
+        yield app.mysql.delete('money', param);
       } catch (e) {
         this.ctx.logger.error(e);
         return false;
@@ -49,7 +48,7 @@ module.exports = app => {
     }
     * update(param) {
       try {
-        yield app.mysql.update('fruit', param);
+        yield app.mysql.update('money', param);
       } catch (e) {
         this.ctx.logger.error(e);
         return false;
@@ -57,5 +56,5 @@ module.exports = app => {
       return true;
     }
   }
-  return Fruit;
+  return Money;
 };

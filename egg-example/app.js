@@ -51,5 +51,18 @@ module.exports = app => {
       });
       yield app.mysql.query(userSchema.toString());
     }
+    const hasMoney = yield app.mysql.query(knex.schema.hasTable('money').toString());
+    if (hasMoney.length === 0) {
+      const userSchema = knex.schema.createTableIfNotExists('money', function(table) {
+        table.increments();
+        table.string('tenyuan').notNullable().defaultTo('');
+        table.string('hundred').notNullable().defaultTo('');
+        table.string('thousand').notNullable().defaultTo('');
+        table.integer('count').notNullable().defaultTo(0);
+        table.timestamp('create_at').defaultTo(knex.fn.now());
+        table.charset('utf8');
+      });
+      yield app.mysql.query(userSchema.toString());
+    }
   });
 };
