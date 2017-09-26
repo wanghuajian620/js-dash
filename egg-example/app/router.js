@@ -22,7 +22,12 @@ module.exports = app => {
   app.post('/panda', 'mysql.update');
   app.post('/one', 'student.create');
   app.post('/two', 'student.delete');
-  app.post('/three', 'student.get');
+  app.post('/three', 'student.select');
   app.post('/four', 'student.update');
+  app.post('/five', 'fruit.create');
+  app.post('/six', 'fruit.delete');
+  app.post('/seven', 'fruit.get');
+  app.post('/eight', 'fruit.select');
+  app.post('/nine', 'fruit.update');
   // app.get('/helper', 'home.helper');
 };

@@ -39,5 +39,17 @@ module.exports = app => {
 
       yield app.mysql.query(userSchema.toString());
     }
+    const hasFruit = yield app.mysql.query(knex.schema.hasTable('fruit').toString());
+    if (hasFruit.length === 0) {
+      const userSchema = knex.schema.createTableIfNotExists('fruit', function(table) {
+        table.increments();
+        table.string('apple').notNullable().defaultTo('');
+        table.string('banana').notNullable().defaultTo('');
+        table.integer('count').notNullable().defaultTo(0);
+        table.timestamp('create_at').defaultTo(knex.fn.now());
+        table.charset('utf8');
+      });
+      yield app.mysql.query(userSchema.toString());
+    }
   });
 };

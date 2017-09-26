@@ -9,8 +9,8 @@ module.exports = app => {
     * delete() {
       this.ctx.body = yield this.service.student.delete(this.ctx.request.body);
     }
-    * get() {
-      this.ctx.body = yield this.service.student.get(this.ctx.request.body);
+    * select() {
+      this.ctx.body = yield this.service.student.select(this.ctx.request.body);
     }
     * update() {
       this.ctx.body = yield this.service.student.update(this.ctx.request.body);
