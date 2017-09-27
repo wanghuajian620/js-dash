@@ -13,6 +13,8 @@ const knex = require('knex')({
 
 
 module.exports = app => {
+  const start = Date.now();
+
   app.beforeStart(function* () {
     const ctx = app.createAnonymousContext();
     const hasCountry = yield app.mysql.query(knex.schema.hasTable('country').toString());
@@ -30,5 +32,8 @@ module.exports = app => {
       yield app.mysql.query(userSchema.toString());
       yield ctx.helper.member(app, 'country', 'China');
     }
+    ctx.logger.info('some request data');
   });
+
+  app.coreLogger.info('10 %d ms', Date.now() - start);
 };
