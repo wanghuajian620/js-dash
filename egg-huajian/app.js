@@ -14,6 +14,7 @@ const knex = require('knex')({
 
 module.exports = app => {
   app.beforeStart(function* () {
+    const ctx = app.createAnonymousContext();
     const hasCountry = yield app.mysql.query(knex.schema.hasTable('country').toString());
     if (hasCountry.length === 0) {
       const userSchema = knex.schema.createTableIfNotExists('country', function(table) {
@@ -27,7 +28,7 @@ module.exports = app => {
       });
 
       yield app.mysql.query(userSchema.toString());
-      yield this.ctx.helper.member(app, 'country', 'China');
+      yield ctx.helper.member(app, 'country', 'China');
     }
   });
 };

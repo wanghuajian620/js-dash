@@ -8,7 +8,9 @@
   },
 };
 */
-const knex = require('knex');
+const knex = require('knex')({
+  client: 'mysql',
+});
 module.exports = {
   * member(app, table, colum) {
     const uniqueName = knex.schema.alterTable(table, function(t) {
