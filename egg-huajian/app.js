@@ -33,6 +33,7 @@ module.exports = app => {
       yield ctx.helper.member(app, 'country', 'China');
     }
     ctx.logger.info('some request data');
+    ctx.logger.warn('WARNNING!!!!');
   });
 
   app.coreLogger.info('10 %d ms', Date.now() - start);
