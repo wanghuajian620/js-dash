@@ -11,9 +11,4 @@ module.exports = app => {
   app.post('/photo2', 'photo.get');
   app.post('/photo3', 'photo.select');
   app.post('/photo4', 'photo.update');
-  app.post('/votes', 'votes.insert');
-  app.post('/votes1', 'votes.delete');
-  app.post('/votes2', 'votes.get');
-  app.post('/votes3', 'votes.select');
-  app.post('/votes4', 'votes.update');
 };
