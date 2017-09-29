@@ -4,9 +4,9 @@ const knex = require('knex')({
   client: 'mysql',
 });
 module.exports = {
-  * member(app, table, column) {
+  * member(app, table, colum) {
     const uniqueName = knex.schema.alterTable(table, function(t) {
-      t.unique(column);
+      t.unique(colum);
     });
     yield app.mysql.query(uniqueName.toString());
   },

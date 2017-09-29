@@ -18,14 +18,16 @@ module.exports = app => {
       const userSchema = knex.schema.createTableIfNotExists('user', function(table) {
         table.increments();
         table.string('mobile').notNullable().defaultTo('');
-        table.string('we chat').notNullable().defaultTo('');
-        table.integer('vote times').notNullable().defaultTo(0);
+        table.string('wechat').notNullable().defaultTo('');
+        table.integer('votetimes').notNullable().defaultTo(0);
         table.string('type').notNullable().defaultTo('');
         table.timestamp('created').defaultTo(knex.fn.now());
         table.charset('utf8');
       });
 
       yield app.mysql.query(userSchema.toString());
+      yield ctx.helper.member(app, 'user', 'mobile');
+      yield ctx.helper.member(app, 'user', 'wechat');
     }
     const hasPhoto = yield app.mysql.query(knex.schema.hasTable('photo').toString());
     if (hasPhoto.length === 0) {
@@ -41,8 +43,6 @@ module.exports = app => {
       });
 
       yield app.mysql.query(userSchema.toString());
-      yield ctx.helper.member(app, 'user', 'mobile');
-      yield ctx.helper.member(app, 'user', 'wechat');
       yield ctx.helper.member(app, 'photo', 'userID');
       yield ctx.helper.member(app, 'photo', 'URL');
     }

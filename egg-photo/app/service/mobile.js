@@ -1,19 +1,19 @@
 'use strict';
 
 module.exports = app => {
-  class User extends app.Service {
+  class Mobile extends app.Service {
     * insert(x) {
       try {
-        yield app.mysql.insert('user', x);
+        yield app.mysql.insert('mobile', x);
       } catch (e) {
         this.ctx.logger.error(e);
         return false;
       }
       return true;
     }
-    * get(x) {
+    * update(x) {
       try {
-        yield app.mysql.get('user', x);
+        yield app.mysql.update('mobile', x);
       } catch (e) {
         this.ctx.logger.error(e);
         return false;
@@ -21,5 +21,5 @@ module.exports = app => {
       return true;
     }
   }
-  return User;
+  return Mobile;
 };
