@@ -2,7 +2,7 @@
 
 module.exports = app => {
   class Mobile extends app.Service {
-    * insert(x) {
+    * set(x) {
       try {
         yield app.mysql.insert('mobile', x);
       } catch (e) {
@@ -11,7 +11,7 @@ module.exports = app => {
       }
       return true;
     }
-    * update(x) {
+    * modify(x) {
       try {
         yield app.mysql.update('mobile', x);
       } catch (e) {

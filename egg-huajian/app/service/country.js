@@ -15,8 +15,8 @@ module.exports = app => {
     * get() {
       const conn = yield app.mysql.beginTransaction();
       try {
-        // yield conn.update('fruit', { id: 2, a: 'baizhang' });
-        yield conn.update('coutry', { id: 2, hundred: 'alsomany' });
+        yield conn.update('fruit', { id: 2, a: 'baizhang' });
+        yield conn.update('coutry ', { id: 2, hundred: 'alsomany' });
         yield conn.commit();
       } catch (e) {
         yield conn.rollback();
@@ -35,7 +35,6 @@ module.exports = app => {
       }
       return res;
     }
-
 
     * delete(param) {
       try {

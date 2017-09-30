@@ -2,7 +2,7 @@
 
 module.exports = app => {
   class Photo extends app.Service {
-    * update(x) {
+    * upload(x) {
       try {
         yield app.mysql.update('photo', x);
       } catch (e) {
@@ -11,16 +11,21 @@ module.exports = app => {
       }
       return true;
     }
-    * get(x) {
+    * list() {
+      let res;
       try {
-        yield app.mysql.get('photo', x);
+        yield app.mysql.select('photo', {
+          where: {
+            photo: [ '', '' ],
+          },
+        });
       } catch (e) {
         this.ctx.logger.error(e);
         return false;
       }
-      return true;
+      return res;
     }
-    * insert(x) {
+    * votes(x) {
       try {
         yield app.mysql.insert('photo', x);
       } catch (e) {
