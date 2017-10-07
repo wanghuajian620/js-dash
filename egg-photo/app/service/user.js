@@ -2,6 +2,7 @@
 
 module.exports = app => {
   class User extends app.Service {
+    // user register
     * register(x) {
       try {
         yield app.mysql.insert('user', x);
@@ -11,6 +12,7 @@ module.exports = app => {
       }
       return true;
     }
+    // user login 
     * login() {
       const conn = yield app.mysql.beginTransaction();
       try {

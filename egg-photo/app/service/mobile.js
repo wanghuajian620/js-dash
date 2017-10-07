@@ -2,6 +2,7 @@
 
 module.exports = app => {
   class Mobile extends app.Service {
+    //  add  mobile  number
     * set(x) {
       try {
         yield app.mysql.insert('mobile', x);
@@ -11,6 +12,7 @@ module.exports = app => {
       }
       return true;
     }
+    //  modify  mobile  number
     * modify(x) {
       try {
         yield app.mysql.update('mobile', x);
