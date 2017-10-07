@@ -1,5 +1,6 @@
 'use strict';
 
 module.exports = app => {
-  app.get('/', 'home.index');
+  app.post('/string', 'type.insert');
+  app.post('/integer', 'type.insert');
 };

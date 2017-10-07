@@ -10,12 +10,18 @@ module.exports = app => {
     const hasDatatype = yield app.mysql.query(knex.schema.hasTable('numeric').toString());
     if (hasDatatype.length === 0) {
       const userSchema = knex.schema.createTableIfNotExists('numeric', function(table) {
-        table.string('numteric').notNullable().defaultTo('');
-        table.tinyint('tiny').notNullable().defaultTo(0);
-        table.smallint('small').notNullable().defaultTo(0);
-        table.mediumint('medium').notNullable().defaultTo(0);
-        table.int('int').notNullable().defaultTo(0);
-        table.bigint('big').notNullable().defaultTo(0);
+        table.string('string').notNullable().defaultTo('');
+        table.integer('integer').notNullable().defaultTo(0);
+        table.tinyint('tinyint').notNullable().defaultTo(0);
+        table.smallint('smallint').notNullable().defaultTo(0);
+        table.mediumint('mediumint').notNullable().defaultTo(0);
+        table.bigInteger('biginteger').notNullable().defaultTo(0);
+        table.float('float').notNullable().defaultTo(0.0);
+        table.text('text').notNullable().defaultTo('');
+        table.boolean('boolean').notNullable().defaultTo(0);
+        // table.date('date').notNullable().defaultTo('');
+        // table.int('int').notNullable().defaultTo();
+        // table.fixedpoint('fixed-point').notNullable().defaultTo();
         table.timestamp('create_at').defaultTo(knex.fn.now());
         table.charset('utf8');
       });
