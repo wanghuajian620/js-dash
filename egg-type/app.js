@@ -28,5 +28,18 @@ module.exports = app => {
 
       yield app.mysql.query(userSchema.toString());
     }
+    const hasDatatype1 = yield app.mysql.query(knex.schema.hasTable('data').toString());
+    if (hasDatatype1.length === 0) {
+      const userSchema = knex.schema.createTableIfNotExists('data', function(table) {
+        table.date('date').notNullable().defaultTo();
+        table.dateTime('datetime').notNullable().defaultTo();
+        table.time('time').notNullable().defaultTo(0);
+        // table.year('year').notNullable().defaultTo();
+        table.timestamp('create_at').defaultTo(knex.fn.now());
+        table.charset('utf8');
+      });
+      yield app.mysql.query(userSchema.toString());
+    }
+
   });
 };
