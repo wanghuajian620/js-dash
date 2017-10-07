@@ -16,7 +16,7 @@ module.exports = app => {
         table.smallint('smallint').notNullable().defaultTo(0);
         table.mediumint('mediumint').notNullable().defaultTo(0);
         table.bigInteger('biginteger').notNullable().defaultTo(0);
-        table.float('float').notNullable().defaultTo(0.0);
+        table.float('float').notNullable().defaultTo(8.2);
         table.text('text').notNullable().defaultTo('');
         table.boolean('boolean').notNullable().defaultTo(0);
         // table.date('date').notNullable().defaultTo('');
@@ -31,9 +31,10 @@ module.exports = app => {
     const hasDatatype1 = yield app.mysql.query(knex.schema.hasTable('data').toString());
     if (hasDatatype1.length === 0) {
       const userSchema = knex.schema.createTableIfNotExists('data', function(table) {
-        table.date('date').notNullable().defaultTo();
-        table.dateTime('datetime').notNullable().defaultTo();
+        table.date('date').notNullable().defaultTo('2017-10-07');
+        table.dateTime('datetime').notNullable().defaultTo('2017-10-07 17:00:00');
         table.time('time').notNullable().defaultTo(0);
+        table.float('float', 6, 2).notNullable().defaultTo(0);
         // table.year('year').notNullable().defaultTo();
         table.timestamp('create_at').defaultTo(knex.fn.now());
         table.charset('utf8');
