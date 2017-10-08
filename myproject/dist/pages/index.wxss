@@ -1,1 +1,1 @@
-.test{background-color:green}
+.test{background-color:green}.flex{display:flex;flex-direction:column}
