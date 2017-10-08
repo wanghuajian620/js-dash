@@ -1,0 +1,62 @@
+<style lang="less">
+ .test {
+  background-color: green;
+}
+/** 添加自定义button点击态样式类**/
+  
+</style>
+
+<template>
+ <view>
+  <view>
+    <text>姓名：王华健</text>
+  </view>
+  <view>    
+    <text>性别：男</text>
+  </view>
+  <view>  
+    <text>年龄：20</text>
+  </view>
+  <view>
+    <text>爱好：编程思密达</text>
+  </view>  
+  <view>  
+    <text>入学：2014年9月</text>
+  </view> 
+  <view>
+    <text>{{text}}</text>
+  </view> 
+  <view>
+    <button>按</button>
+  </view> 
+  <view>
+    <button type="warn" size="{{size}}" loading="{{loading}} "plain="{{plain}}" @tap="add"> {{count}} </button>
+  </view>     
+ </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: '个人绝密档案'
+    }
+
+    data = {
+      text: '......',
+      size: 'default',
+      loading: false,
+      plain: true,
+      count: 0
+    }
+    methods = {
+      add() {
+        let self = this
+        self.count++
+      }
+    }
+
+    onload() {}
+  }
+</script>

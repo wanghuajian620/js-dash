@@ -1,0 +1,27 @@
+
+ <view>
+  <view>
+    <text>姓名：王华健</text>
+  </view>
+  <view>    
+    <text>性别：男</text>
+  </view>
+  <view>  
+    <text>年龄：20</text>
+  </view>
+  <view>
+    <text>爱好：编程思密达</text>
+  </view>  
+  <view>  
+    <text>入学：2014年9月</text>
+  </view> 
+  <view>
+    <text>{{text}}</text>
+  </view> 
+  <view>
+    <button>按</button>
+  </view> 
+  <view>
+    <button type="warn" size="{{size}}" loading="{{loading}} " plain="{{plain}}" bindtap="add"> {{count}} </button>
+  </view>     
+ </view>
