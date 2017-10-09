@@ -8,6 +8,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 1px solid red;
+  border-radius: 6px;
 }
 .box {
   margin: 10px 12px;
@@ -83,7 +85,7 @@
       <button bindtap="bindButtonTap">获取视频</button>
     </view>
     <view>
-      <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop></audio>
+      <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{srcone}}" id="myAudio" controls loop></audio>
       <button type="primary" bindtap="audioPlay">播放</button>
       <button type="primary" bindtap="audioPause">暂停</button>
       <button type="primary" bindtap="audio14">设置当前播放时间为14秒</button>
@@ -119,7 +121,7 @@ export default class Index extends wepy.page {
     poster: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000',
     name: '最终信仰',
     author: '尚雯婕',
-    src: '../audio/尚雯婕 - 最终信仰.mp3'
+    srcone: '../audio/尚雯婕 - 最终信仰.mp3'
   }
   methods = {
     add() {

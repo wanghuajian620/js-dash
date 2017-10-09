@@ -1,0 +1,101 @@
+<style lang="less">
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+}
+.box {
+   display: flex;
+   justify-content: space-between;
+   height: 50px;
+   margin: 10px 20px;
+}
+.apple {
+  justify-content: space-between;
+  font-size: 20px;
+}
+.dep {
+  justify-content: space-between;
+  font-size: 20px;
+  // margin: 20px 20px 20px 20px; 
+}
+.dep1 {
+  justify-content: space-between;
+   font-size: 20px;
+  //  margin: 20px 20px 20px 20px; 
+}
+.dep2 {
+  justify-content: space-between;
+  font-size: 20px;
+  // margin: 20px 20px 20px 20px; 
+}
+.low {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+}
+.high {
+  background-color: green;
+  height: 90px;
+  width: 90px;
+  display: flex;
+  align-items: center;
+  margin: 6px;
+}
+</style>
+
+
+
+<template>
+  <view>
+    <view class="flex">
+      <text class="box">简单2步，选中心动好礼</text>
+    </view> 
+    <view class="box">
+      <text class="apple">送给TA</text>
+      <text class="apple">TA喜欢的</text>
+      <text class="apple">完成</text>
+    </view>
+    <view class="flex">
+      <text class="box">送她送他</text>
+    </view>
+    <view class="low">
+      <view class="high">
+        <text class="dep">自己</text>
+      </view>
+      <view class="high">
+        <text class="dep1">老公</text>
+      </view>
+      <view class="high">
+        <text class="dep2">兄弟</text>
+      </view>  
+    </view> 
+    <view class="low">
+      <view class="high">
+        <text class="dep">爸爸</text>
+      </view>
+      <view class="high"> 
+        <text class="dep1">长辈</text>
+      </view>
+      <view class="high"> 
+        <text class="dep2">同事</text>
+      </view>   
+    </view>  
+      <text>先跳过随便逛逛</text> 
+  </view>  
+</template>
+
+
+<script>
+import wepy from 'wepy'
+
+export default class Index extends wepy.page {
+  config = {
+  }
+  data = {}
+  methods = {}
+  onLoad() { }
+}
+  </script>

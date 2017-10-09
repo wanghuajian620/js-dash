@@ -55,7 +55,7 @@
       <button bindtap="bindButtonTap">获取视频</button>
     </view>
     <view>
-      <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop/>
+      <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{srcone}}" id="myAudio" controls loop/>
       <button type="primary" bindtap="audioPlay">播放</button>
       <button type="primary" bindtap="audioPause">暂停</button>
       <button type="primary" bindtap="audio14">设置当前播放时间为14秒</button>
