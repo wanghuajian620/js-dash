@@ -1,45 +1,64 @@
 
- <view class="flex">
-   <text>姓名：王华健</text>
-   <text>性别：男</text>
-   <text>年龄：20</text>
-   <text>爱好：编程思密达</text>
-   <text>入学：2014年9月</text>
-   <text>{{text}}</text>
-   <button>按</button>
-   <button type="warn" size="{{size}}" loading="{{loading}}" plain="{{plain}}" bindtap="add"> {{count}} </button>
-  <view>
-    <checkbox-group>
-      <label  wx:for="{{items}}" wx:key="index">
-        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
-      </label>
-    </checkbox-group>
-  </view>
-  <form>
+  <view class="flex">
+    <text class="test">姓名：王华健</text>
+    <text class="box">性别：男</text>
+    <text class="box">年龄：20</text>
+    <text class="view">爱好：编程思密达</text>
+    <text class="test">入学：2014年9月</text>
+    <text>{{text}}</text>
+    <button>按</button>
+    <button type="warn" size="{{size}}" loading="{{loading}}" plain="{{plain}}" bindtap="add"> {{count}} </button>
     <view>
-      <view>switch</view>
-      <switch name="switch"/>
+      <checkbox-group>
+        <label  wx:for="{{items}}" wx:key="index">
+          <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+        </label>
+      </checkbox-group>
     </view>
+    <form>
+      <view>
+        <view>switch</view>
+        <switch name="switch"/>
+      </view>
+      <view>
+        <view>slider</view>
+        <slider name="slider" show-value/>
+      </view>
+      <input name="input" placeholder="please input here"/>
+      <radio-group name="radio-group">
+        <label>
+          <radio value="radio1"/>radio1</label>
+        <label>
+          <radio value="radio2"/>radio2</label>
+      </radio-group>
+      <checkbox-group name="checkbox">
+        <label>
+          <checkbox value="checkbox1"/>checkbox1</label>
+        <label>
+          <checkbox value="checkbox2"/>checkbox2</label>
+      </checkbox-group>
+      <button formType="submit">Submit</button>
+      <button formType="reset">Reset</button>
+    </form>
     <view>
-      <view>slider</view>
-      <slider name="slider" show-value/>
-    </view>
-    <input name="input" placeholder="please input here"/>
-    <radio-group name="radio-group">
-      <label><radio value="radio1"/>radio1</label>
-      <label><radio value="radio2"/>radio2</label>
-    </radio-group>
-    <checkbox-group name="checkbox">
-      <label><checkbox value="checkbox1"/>checkbox1</label>
-      <label><checkbox value="checkbox2"/>checkbox2</label>
-    </checkbox-group>
-    <button formType="submit">Submit</button>
-    <button formType="reset">Reset</button>
-  </form>
-  <view>
-    <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
-    <input placeholder="这个只有在按钮点击的时候才聚焦" focus="{{focus}}"/>
+      <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
+      <input placeholder="这个只有在按钮点击的时候才聚焦" focus="{{focus}}"/>
       <button bindtap="bindButtonTap">使得输入框获取焦点</button>
-    <input cursor="20" placeholder="试试"/>
-  </view>  
- </view>
+      <input cursor="20" placeholder="试试"/>
+    </view>
+    <view>
+      <image style="background-color:#00FF00" src="{{img}}"/>
+      <button bindtap="abc">从本地相册选取照片</button>
+    </view>
+    <view>
+      <video src="{{src}}"/>
+      <button bindtap="bindButtonTap">获取视频</button>
+    </view>
+    <view>
+      <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop/>
+      <button type="primary" bindtap="audioPlay">播放</button>
+      <button type="primary" bindtap="audioPause">暂停</button>
+      <button type="primary" bindtap="audio14">设置当前播放时间为14秒</button>
+      <button type="primary" bindtap="audioStart">回到开头</button>
+    </view>
+  </view>
