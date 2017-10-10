@@ -2,36 +2,65 @@
   <view>
     <view class="flex">
       <text class="box">简单2步，选中心动好礼</text>
-    </view> 
+    </view>
+    <view>
     <view class="box">
-      <text class="apple">送给TA</text>
-      <text class="apple">TA喜欢的</text>
-      <text class="apple">完成</text>
+      <view class="circle">
+        <text class="apple">送给TA</text>
+      </view>
+      <view class="circle">
+        <text class="apple">TA喜欢的</text>
+      </view>
+      <view class="circle"> 
+        <text class="apple">完成</text>
+      </view>  
     </view>
     <view class="flex">
       <text class="box">送她送他</text>
     </view>
     <view class="low">
-      <view class="high">
-        <text class="dep">自己</text>
+      <view class="left">
+        <view class="high">
+          <text class="dep">自己</text>
+        </view>   
       </view>
       <view class="high">
-        <text class="dep1">老公</text>
+        <text class="brother">老公</text>
       </view>
-      <view class="high">
-        <text class="dep2">兄弟</text>
+      <view class="left">
+        <view class="high">
+          <text class="others">兄弟</text>
+        </view>  
       </view>  
     </view> 
     <view class="low">
-      <view class="high">
-        <text class="dep">爸爸</text>
+      <view class="left">
+        <view class="high">
+          <text class="dep">爸爸</text>
+        </view>  
       </view>
       <view class="high"> 
-        <text class="dep1">长辈</text>
+        <text class="brother">长辈</text>
       </view>
-      <view class="high"> 
-        <text class="dep2">同事</text>
+      <view class="left">
+        <view class="high">
+          <text class="others">同事</text>
+        </view>  
       </view>   
     </view>  
-      <text>先跳过随便逛逛</text> 
-  </view>
+      <text class="dog">先跳过随便逛逛</text> 
+  </view>  
+
+
+
+<script>
+import wepy from 'wepy'
+
+export default class Index extends wepy.page {
+  config = {
+  }
+  data = {}
+  methods = {}
+  onLoad() { }
+}
+  </script></view>
