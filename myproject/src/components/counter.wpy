@@ -6,10 +6,10 @@
   .count {
     font-size: 18px;
     font-weight: bold;
-    &.red {
+    .red {
       color: red;
     }
-    &.green {
+    .green {
       color: green;
     }
   }

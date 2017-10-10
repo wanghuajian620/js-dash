@@ -4,77 +4,37 @@
   flex-direction: column;
   align-items: center;
   font-size: 30px;
+  margin: 40px 20px 5px 20px;
 }
-.xiaohong {
+.forhim {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 20px;
+  margin: 10px 20px 10px 20px;
 }
 .qiushui {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 10px 50px 20px 50px;
-
 }
 .circle {
   display: flex;
   height: 15px;
   width: 15px;
-  border-top-left-radius: 40px;
-  border-bottom-left-radius: 40px;
-  border-top-right-radius: 40px;
-  border-bottom-right-radius: 40px;
+  border-radius: 40px;
   border: 2px solid black;
 }
-.xiaobai {
-  display: flex;
-  height: 15px;
-  width: 15px;
-  border-top-left-radius: 40px;
-  border-bottom-left-radius: 40px;
-  border-top-right-radius: 40px;
-  border-bottom-right-radius: 40px;
-  border: 2px solid black;
-}
-.xiaolan {
-  display: flex;
-  height: 15px;
-  width: 15px;
-  border-top-left-radius: 40px;
-  border-bottom-left-radius: 40px;
-  border-top-right-radius: 40px;
-  border-bottom-right-radius: 40px;
-  border: 2px solid black;
-}
-.yaodao {
+.top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 50px 50px 10px 50px;
+  margin: 5px 50px 10px 50px;
   padding: 50px 5px 10px 5px; 
 }
-.apple {
-  justify-content: space-between;
-  font-size: 8px;
-  margin: 25px 5px 30px 30px;
-  padding: 20px;
-}
-.dep {
-  justify-content: space-between;
-  font-size: 15px;
-  margin: 2px 10px 2px 10px; 
-}
-.brother {
-  justify-content: space-between;
-   font-size: 15px;
-   margin: 2px 10px 2px 10px; 
-}
-.others {
-  justify-content: space-between;
-  font-size: 15px;
-  margin: 2px 10px 2px 10px; 
+.word {
+  font-size: 13px; 
 }
 .low {
   display: flex;
@@ -95,34 +55,20 @@
 .left {
   padding: 5px;
 }
-.right {
-  border: 5px;
+.line {
+  height: 1px;
+  width: 100px;
+  background-color: black;
 }
-.like {
+.last {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-}
-.dog {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
   font-size: 10px;
-  margin: 110px 2px;
-}
-.pig {
-  height: 1px;
-  width: 100px;
-  background-color: black;
-}
-.bird {
-  height: 1px;
-  width: 100px;
-  background-color: black;
 }
 .border {
-
   border: yellow;
   height: 40px;
   width: 40px;
@@ -131,45 +77,53 @@
   display: flex;
   flex-direction: column;
 }
+.distance {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 </style>
 
 
 
 <template>
+<view>
   <view>
     <text class="flex">简单2步，选中心动好礼</text>
-    <view class="yaodao">
+    <view class="top">
       <image class="circle" src="{{a}}"></image>
-      <view class="pig">
+      <view class="line">
       </view>   
-      <image class="xiaobai" src="{{b}}"></image>
-      <view class="bird">
+      <image class="circle" src="{{b}}"></image>
+      <view class="line">
       </view>  
-      <image class="xiaolan" src="{{c}}"></image>
-      </view>
+      <image class="circle" src="{{c}}"></image>
     </view>        
     <view class="qiushui">
       <text>送给TA</text>
       <text>TA喜欢的</text>
       <text>完成</text>
+    </view>
+    <view class="distance">
+      <text class="forhim" @tap="he" style="color: {{color1}}; border-bottom: 1px solid {{color11}}">送他</text>
+      <text class="forhim" @tap="she" style="color: {{color2}}; border-bottom: 1px solid {{color22}}">送她</text>
     </view>  
-    <text class="xiaohong">送她  送他</text>
   </view>
     <view class="low">
       <view class="left">
         <view class="high xiaoxiao">
           <image class="border" src="{{d}}"></image>
-          <text class="dep">自己</text>
+          <text class="word">{{myself}}</text>
         </view>   
       </view>
       <view class="high xiaoxiao">
         <image class="border" src="{{e}}"></image>
-        <text class="brother">老公</text>
+        <text class="word">{{husband}}</text>
       </view>
       <view class ="left">
         <view class="high xiaoxiao">
           <image class="border" src="{{f}}"></image>
-          <text class="others">兄弟</text>
+          <text class="word">{{sister}}</text>
         </view>  
       </view>  
     </view> 
@@ -177,22 +131,22 @@
       <view class="left">
         <view class="high xiaoxiao">
           <image class="border" src="{{g}}"></image>
-          <text class="dep">爸爸</text>
+          <text class="word">{{father}}</text>
         </view>  
       </view>
       <view class="high xiaoxiao"> 
         <image class="border" src="{{h}}"></image>
-        <text class="brother">长辈</text>
+        <text class="word">{{aunt}}</text>
       </view>
       <view class="left">
         <view class="high xiaoxiao">
           <image class="border" src="{{j}}"></image>
-          <text class="others">同事</text>
+          <text class="word">{{college}}</text>
         </view>  
       </view>   
     </view>  
-      <text class="dog">先跳过随便逛逛</text> 
-  </view>  
+      <text class="last">先跳过随便逛逛</text> 
+</view>     
 </template>
 
 
@@ -211,9 +165,58 @@ export default class Index extends wepy.page {
     f: '../imgas/手表.png',
     g: '../imgas/眼镜.png',
     h: '../imgas/围巾.png',
-    j: '../imgas/钱包.png'
+    j: '../imgas/钱包.png',
+    myself: '自己',
+    husband: '老公/男票',
+    sister: '兄弟/基友',
+    father: '爸爸',
+    aunt: '长辈',
+    college: '同事',
+    color1: 'red',
+    color11: 'red',
+    color2: 'black',
+    color22: 'white'
   }
-  methods = {}
+  methods = {
+    he() {
+      let self = this
+      self.d = '../imgas/相机.png'
+      self.e = '../imgas/钻戒.png'
+      self.f = '../imgas/手表.png'
+      self.g = '../imgas/眼镜.png'
+      self.h = '../imgas/围巾.png'
+      self.j = '../imgas/钱包.png'
+      self.myself = '自己'
+      self.husband = '老公/男票'
+      self.sister = '兄弟/基友'
+      self.father = '爸爸'
+      self.aunt = '长辈'
+      self.college = '同事'
+      self.color1 = 'red'
+      self.color11 = 'red'
+      self.color2 = 'black'
+      self.color22 = 'white'
+    },
+    she() {
+      let self = this
+      self.d = '../imgas/相机.png'
+      self.e = '../imgas/钻戒.png'
+      self.f = '../imgas/口红.png'
+      self.g = '../imgas/鲜花.png'
+      self.h = '../imgas/围巾.png'
+      self.j = '../imgas/钱包.png'
+      self.myself = '自己'
+      self.husband = '老婆/女票'
+      self.sister = '姐妹/闺蜜'
+      self.father = '妈妈'
+      self.aunt = '长辈'
+      self.college = '同事'
+      self.color1 = 'black'
+      self.color11 = 'white'
+      self.color2 = 'red'
+      self.color22 = 'red'
+    }
+  }
   onLoad() { }
 }
   </script>
