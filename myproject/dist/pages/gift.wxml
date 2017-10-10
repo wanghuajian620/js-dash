@@ -1,66 +1,57 @@
 
   <view>
-    <view class="flex">
-      <text class="box">简单2步，选中心动好礼</text>
-    </view>
-    <view>
-    <view class="box">
-      <view class="circle">
-        <text class="apple">送给TA</text>
-      </view>
-      <view class="circle">
-        <text class="apple">TA喜欢的</text>
-      </view>
-      <view class="circle"> 
-        <text class="apple">完成</text>
+    <text class="flex">简单2步，选中心动好礼</text>
+    <view class="yaodao">
+      <image class="circle" src="{{a}}"/>
+      <view class="pig">
+      </view>   
+      <image class="xiaobai" src="{{b}}"/>
+      <view class="bird">
       </view>  
-    </view>
-    <view class="flex">
-      <text class="box">送她送他</text>
-    </view>
+      <image class="xiaolan" src="{{c}}"/>
+      </view>
+    </view>        
+    <view class="qiushui">
+      <text>送给TA</text>
+      <text>TA喜欢的</text>
+      <text>完成</text>
+    </view>  
+    <text class="xiaohong">送她  送他</text>
+  
     <view class="low">
       <view class="left">
-        <view class="high">
+        <view class="high xiaoxiao">
+          <image class="border" src="{{d}}"/>
           <text class="dep">自己</text>
         </view>   
       </view>
-      <view class="high">
+      <view class="high xiaoxiao">
+        <image class="border" src="{{e}}"/>
         <text class="brother">老公</text>
       </view>
       <view class="left">
-        <view class="high">
+        <view class="high xiaoxiao">
+          <image class="border" src="{{f}}"/>
           <text class="others">兄弟</text>
         </view>  
       </view>  
     </view> 
     <view class="low">
       <view class="left">
-        <view class="high">
+        <view class="high xiaoxiao">
+          <image class="border" src="{{g}}"/>
           <text class="dep">爸爸</text>
         </view>  
       </view>
-      <view class="high"> 
+      <view class="high xiaoxiao"> 
+        <image class="border" src="{{h}}"/>
         <text class="brother">长辈</text>
       </view>
       <view class="left">
-        <view class="high">
+        <view class="high xiaoxiao">
+          <image class="border" src="{{j}}"/>
           <text class="others">同事</text>
         </view>  
       </view>   
     </view>  
-      <text class="dog">先跳过随便逛逛</text> 
-  </view>  
-
-
-
-<script>
-import wepy from 'wepy'
-
-export default class Index extends wepy.page {
-  config = {
-  }
-  data = {}
-  methods = {}
-  onLoad() { }
-}
-  </script></view>
+      <text class="dog">先跳过随便逛逛</text>

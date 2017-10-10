@@ -5,22 +5,55 @@
   align-items: center;
   font-size: 30px;
 }
-.box {
-   display: flex;
-   justify-content: space-between;
-   height: 10px;
-   margin: 30px 10px 20px 20px;
-   padding: 5px
+.xiaohong {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+}
+.qiushui {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 50px 20px 50px;
+
 }
 .circle {
   display: flex;
-  height: 10px;
-  // width: 10px;
+  height: 15px;
+  width: 15px;
   border-top-left-radius: 40px;
   border-bottom-left-radius: 40px;
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
   border: 2px solid black;
+}
+.xiaobai {
+  display: flex;
+  height: 15px;
+  width: 15px;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  border: 2px solid black;
+}
+.xiaolan {
+  display: flex;
+  height: 15px;
+  width: 15px;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  border: 2px solid black;
+}
+.yaodao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px 50px 10px 50px;
+  padding: 50px 5px 10px 5px; 
 }
 .apple {
   justify-content: space-between;
@@ -51,7 +84,7 @@
   margin: 10px 40px 5px 40px
 }
 .high {
-  background-color: green;
+  background-color: pink;
   height: 60px;
   width: 60px;
   display: flex;
@@ -78,56 +111,82 @@
   font-size: 10px;
   margin: 110px 2px;
 }
+.pig {
+  height: 1px;
+  width: 100px;
+  background-color: black;
+}
+.bird {
+  height: 1px;
+  width: 100px;
+  background-color: black;
+}
+.border {
+
+  border: yellow;
+  height: 40px;
+  width: 40px;
+}
+.xiaoxiao {
+  display: flex;
+  flex-direction: column;
+}
 </style>
 
 
 
 <template>
   <view>
-    <view class="flex">
-      <text class="box">简单2步，选中心动好礼</text>
-    </view>
-    <view>
-    <view class="box">
-      <view class="circle">
-        <text class="apple">送给TA</text>
-      </view>
-      <view class="circle">
-        <text class="apple">TA喜欢的</text>
-      </view>
-      <view class="circle"> 
-        <text class="apple">完成</text>
+    <text class="flex">简单2步，选中心动好礼</text>
+    <view class="yaodao">
+      <image class="circle" src="{{a}}"></image>
+      <view class="pig">
+      </view>   
+      <image class="xiaobai" src="{{b}}"></image>
+      <view class="bird">
       </view>  
-    </view>
-    <view class="flex">
-      <text class="box">送她送他</text>
-    </view>
+      <image class="xiaolan" src="{{c}}"></image>
+      </view>
+    </view>        
+    <view class="qiushui">
+      <text>送给TA</text>
+      <text>TA喜欢的</text>
+      <text>完成</text>
+    </view>  
+    <text class="xiaohong">送她  送他</text>
+  </view>
     <view class="low">
       <view class="left">
-        <view class="high">
+        <view class="high xiaoxiao">
+          <image class="border" src="{{d}}"></image>
           <text class="dep">自己</text>
         </view>   
       </view>
-      <view class="high">
+      <view class="high xiaoxiao">
+        <image class="border" src="{{e}}"></image>
         <text class="brother">老公</text>
       </view>
       <view class ="left">
-        <view class="high">
+        <view class="high xiaoxiao">
+          <image class="border" src="{{f}}"></image>
           <text class="others">兄弟</text>
         </view>  
       </view>  
     </view> 
     <view class="low">
       <view class="left">
-        <view class="high">
+        <view class="high xiaoxiao">
+          <image class="border" src="{{g}}"></image>
           <text class="dep">爸爸</text>
         </view>  
       </view>
-      <view class="high"> 
+      <view class="high xiaoxiao"> 
+        <image class="border" src="{{h}}"></image>
         <text class="brother">长辈</text>
       </view>
       <view class="left">
-        <view class="high">
+        <view class="high xiaoxiao">
+          <image class="border" src="{{j}}"></image>
           <text class="others">同事</text>
         </view>  
       </view>   
@@ -143,7 +202,17 @@ import wepy from 'wepy'
 export default class Index extends wepy.page {
   config = {
   }
-  data = {}
+  data = {
+    a: '../imgas/人头.png',
+    b: '../imgas/礼物.png',
+    c: '../imgas/对勾.png',
+    d: '../imgas/相机.png',
+    e: '../imgas/钻戒.png',
+    f: '../imgas/手表.png',
+    g: '../imgas/眼镜.png',
+    h: '../imgas/围巾.png',
+    j: '../imgas/钱包.png'
+  }
   methods = {}
   onLoad() { }
 }
