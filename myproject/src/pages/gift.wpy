@@ -147,6 +147,7 @@ import wepy from 'wepy'
 
 export default class Index extends wepy.page {
   config = {
+    navigationBarTitleText: '礼物说'
   }
   data = {
     a: '../imgas/人头.png',
