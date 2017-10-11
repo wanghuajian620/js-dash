@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 30px;
+  font-size: 25px;
   margin: 40px 20px 5px 20px;
 }
 .forhim {
@@ -13,11 +13,12 @@
   font-size: 20px;
   margin: 10px 20px 10px 20px;
 }
-.qiushui {
+.top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 10px 50px 20px 50px;
+  margin: 5px 80px 3px 80px;
+  padding: 20px 5px 10px 5px; 
 }
 .circle {
   display: flex;
@@ -26,39 +27,46 @@
   border-radius: 40px;
   border: 2px solid black;
 }
-.top {
+.line {
+  height: 1px;
+  width: 100px;
+  background-color: black;
+}
+.step {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 5px 50px 10px 50px;
-  padding: 50px 5px 10px 5px; 
+  margin: 3px 80px 20px 80px;
+  font-size: 13px;
 }
-.word {
-  font-size: 13px; 
+.givewho {
+  display: flex;
+  justify-content: center;
+  margin: 40px 50px 5px 50px;
 }
-.low {
+.shop {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 20px;
   margin: 10px 40px 5px 40px
 }
-.high {
-  background-color: pink;
+.box {
+  background-color: grey;
   height: 60px;
   width: 60px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin: 4px 4px 4px 4px;
-  padding: 10px;
-}
-.left {
+  margin: 1px 4px 1px 4px;
   padding: 5px;
 }
-.line {
-  height: 1px;
-  width: 100px;
-  background-color: black;
+.border {
+  height: 40px;
+  width: 40px;
+}
+.word {
+  font-size: 13px; 
 }
 .last {
   position: fixed;
@@ -67,20 +75,6 @@
   display: flex;
   justify-content: center;
   font-size: 10px;
-}
-.border {
-  border: yellow;
-  height: 40px;
-  width: 40px;
-}
-.xiaoxiao {
-  display: flex;
-  flex-direction: column;
-}
-.distance {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 </style>
 
@@ -99,51 +93,43 @@
       </view>  
       <image class="circle" src="{{c}}"></image>
     </view>        
-    <view class="qiushui">
+    <view class="step">
       <text>送给TA</text>
       <text>TA喜欢的</text>
       <text>完成</text>
     </view>
-    <view class="distance">
+    <view class="givewho">
       <text class="forhim" @tap="he" style="color: {{color1}}; border-bottom: 1px solid {{color11}}">送他</text>
       <text class="forhim" @tap="she" style="color: {{color2}}; border-bottom: 1px solid {{color22}}">送她</text>
     </view>  
   </view>
-    <view class="low">
-      <view class="left">
-        <view class="high xiaoxiao">
-          <image class="border" src="{{d}}"></image>
-          <text class="word">{{myself}}</text>
-        </view>   
-      </view>
-      <view class="high xiaoxiao">
+    <view class="shop">
+      <view class="box">
+        <image class="border" src="{{d}}"></image>
+        <text class="word">{{myself}}</text>
+      </view>   
+      <view class="box">
         <image class="border" src="{{e}}"></image>
         <text class="word">{{husband}}</text>
       </view>
-      <view class ="left">
-        <view class="high xiaoxiao">
-          <image class="border" src="{{f}}"></image>
-          <text class="word">{{sister}}</text>
-        </view>  
-      </view>  
+      <view class="box">
+        <image class="border" src="{{f}}"></image>
+        <text class="word">{{sister}}</text>
+      </view>    
     </view> 
-    <view class="low">
-      <view class="left">
-        <view class="high xiaoxiao">
-          <image class="border" src="{{g}}"></image>
-          <text class="word">{{father}}</text>
-        </view>  
-      </view>
-      <view class="high xiaoxiao"> 
+    <view class="shop">
+      <view class="box">
+        <image class="border" src="{{g}}"></image>
+        <text class="word">{{father}}</text>
+      </view>  
+      <view class="box"> 
         <image class="border" src="{{h}}"></image>
         <text class="word">{{aunt}}</text>
       </view>
-      <view class="left">
-        <view class="high xiaoxiao">
-          <image class="border" src="{{j}}"></image>
-          <text class="word">{{college}}</text>
-        </view>  
-      </view>   
+      <view class="box">
+        <image class="border" src="{{j}}"></image>
+        <text class="word">{{college}}</text>
+      </view>     
     </view>  
       <text class="last">先跳过随便逛逛</text> 
 </view>     
