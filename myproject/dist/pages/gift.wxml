@@ -3,13 +3,13 @@
   <view>
     <text class="flex">简单2步，选中心动好礼</text>
     <view class="top">
-      <image class="circle" src="{{a}}"/>
+      <image class="circle border1" src="{{a}}"/>
       <view class="line">
       </view>   
-      <image class="circle" src="{{b}}"/>
+      <image class="circle border1" src="{{b}}"/>
       <view class="line">
       </view>  
-      <image class="circle" src="{{c}}"/>
+      <image class="circle border1" src="{{c}}"/>
     </view>        
     <view class="step">
       <text>送给TA</text>
