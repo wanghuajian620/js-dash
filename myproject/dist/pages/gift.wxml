@@ -49,5 +49,5 @@
       <text class="word">{{college}}</text>
     </view>     
   </view>
-  <text class="last">先跳过随便逛逛</text> 
+  <text class="last">先跳过随便逛逛▶</text> 
 </view>
