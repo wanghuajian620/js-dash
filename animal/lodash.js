@@ -36,3 +36,13 @@ console.log(_.findLastIndex(x,['active',false]));
 
 var a = [1, 2, 3, 4, 5];
 console.log(_.sortedIndexOf([1, 2, 3, 4, 5],3));
+
+arr = [1, 2, 3, 4, 5, 6, 7, 8];
+var k = arr.filter(function(abc) {
+    return abc >= 3;
+});
+
+console.log(arr.filter(function(abc) {
+    return abc >= 3;
+}));
+console.log('...........filter...........')
