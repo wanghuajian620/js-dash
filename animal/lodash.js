@@ -34,15 +34,31 @@ console.log(_.findLastIndex(x,['active',false]));
 //console.log(_.fromPairs(a));
 
 
-var a = [1, 2, 3, 4, 5];
-console.log(_.sortedIndexOf([1, 2, 3, 4, 5],3));
+// var a = [1, 2, 3, 4, 5];
+// console.log(_.sortedIndexOf([1, 2, 3, 4, 5],3));
 
 arr = [1, 2, 3, 4, 5, 6, 7, 8];
 var k = arr.filter(function(abc) {
     return abc >= 3;
 });
-
+// filter 条件性的筛选出我们想要的
 console.log(arr.filter(function(abc) {
     return abc >= 3;
 }));
 console.log('...........filter...........')
+
+
+// var objects = [{ 'a': 1 }, { 'b': 2 }];
+
+// var deep = _.cloneDeep(objects);
+// console.log(deep[0] === objects[0]);
+console.log('.................ddddd............')
+
+// var apple = {'a':1};
+var objects = [{ 'a': 1 }, arr=[1,2]];
+var deep = _.clone(objects);
+var deep1 = _.cloneDeep(objects);
+console.log(deep);
+console.log(deep1);
+console.log(deep[0]===deep1[0]);
+// console.log(deep === 'a');
