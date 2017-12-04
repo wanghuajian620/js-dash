@@ -17,7 +17,7 @@ console.log(_.fill(Array(5),2));
 console.log(_.fill(Array(3),2));
 console.log(_.fill([4, 6, 8, 10], '*', 1, 3));// * behind ,1 and 3  is  change  seat( 6 to 10) but [1 ,3).so  [6, 10)
 console.log(_.fill([1, 2, 3], '*', 1, 4));
-
+*/
 var x = [
     { 'user': 'barney',  'active': false },
     { 'user': 'fred',    'active': false },
@@ -29,7 +29,7 @@ console.log(_.findIndex(x,['active',false]));// from left to right  count  first
 console.log(_.findIndex(x,'active'));// if don't write  true or false, then defalut value is  true.
 
 console.log(_.findLastIndex(x,['active',false]));
-*/
+
 //var a = [['b', 8],['c' , 6]];
 //console.log(_.fromPairs(a));
 
@@ -62,3 +62,26 @@ console.log(deep);
 console.log(deep1);
 console.log(deep[0]===deep1[0]);
 // console.log(deep === 'a');
+console.log('.............sssssssssssss.......');
+
+var apple = _.toString(null);
+console.log(apple);
+console.log(_.toString([1,2,3]));
+console.log(_.toString('-0'));
+console.log('-0');
+
+
+console.log('.....................hhhhhhhh.........');
+
+console.log(_.forEach([1,2,3]));
+
+
+
+
+var numbers = [1, 2, 3];
+numbers.push(4);
+console.log(numbers);
+
+
+
+
