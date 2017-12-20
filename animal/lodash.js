@@ -85,3 +85,6 @@ console.log(numbers);
 
 
 
+var a
+console.log(a);
+a=1;
