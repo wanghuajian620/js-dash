@@ -88,3 +88,31 @@ console.log(numbers);
 var a
 console.log(a);
 a=1;
+
+console.log('------------------------在此之下是测试练习-------------------------')
+
+var obj = {
+    name: '隔壁老王',
+    age: 60,
+    sex: 'male',
+};
+var obj1 = _.clone(obj);
+console.log(obj1);
+
+console.log('-------浅拷贝------')
+
+var a = {
+    name: '隔壁老王',
+    age: 60,
+    sex: 'male',
+    card: ['信用卡', '借记卡', '理发卡'],
+    wife: {
+        name: '小刘'
+    },
+    divorce: function() {}
+};
+var b = {
+    father: '老王'
+};
+var b = _.clone(a); // b 是指向一个新的对象的，所以它自己的属性就Miss了。
+console.log(b);
