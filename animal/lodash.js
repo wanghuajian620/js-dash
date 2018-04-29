@@ -116,3 +116,13 @@ var b = {
 };
 var b = _.clone(a); // b 是指向一个新的对象的，所以它自己的属性就Miss了。
 console.log(b);
+
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+console.log(0 == undefined);
+console.log(undefined == false);
+console.log(0 == false);
+console.log('$$$$$$$$$$$$$$$$$');
+console.log('' == false);
+console.log('' == 0);
+console.log([] == 0);
+console.log([] == []);
