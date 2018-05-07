@@ -126,3 +126,26 @@ console.log('' == false);
 console.log('' == 0);
 console.log([] == 0);
 console.log([] == []);
+console.log('>>>>>>>>>>>>>>>>>this的指向。');
+
+function test() {
+  this.x = 1;
+  console.log(this.x);  
+}
+test();
+
+var x = 1;
+function test() {
+  console.log(this.x);
+}
+test();
+console.log('作为对象方法的调用');
+
+function test() {
+  console.log(this.x); // undefined
+}
+var o = {
+  x: 1,
+  m: test()
+};
+console.log(o.m(), 'ciciiiic');
