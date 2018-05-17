@@ -148,4 +148,16 @@ var o = {
   x: 1,
   m: test()
 };
-console.log(o.m(), 'ciciiiic');
+// console.log(o.m(), 'ciciiiic');
+
+console.log('>>>>>>>>>>>>>>>>>>>js方法')
+var arr = [1, 2, 3, 4];
+console.log(_.toString(arr));
+console.log(arr.toLocaleString());
+console.log(arr.join());
+
+
+console.log('uuuuuuuuuuuuuuuuuuuuujsyuanxing');
+var a = {};
+console.log(a.prototype);
+console.log(a.__proto__);
